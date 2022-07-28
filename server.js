@@ -5,11 +5,22 @@ const app = express()
 const total = 0
 const tipPercentage = 0
 
+
+
+
+app.get('/magic/Will%20I%20Be%20A%20Millionaire', (req, res) => {
+    console.log('Will I be a Millionaire?')
+    var items = ['Yes', 'No', 'Maybe']
+    var item = items[Math.floor(Math.random() * items.length)]
+    res.send(item)
+   
+})
+
+
 app.get('/tip', (req, res) => {
     res.send(total)
     res.send(tipPercentage)
 })
-
 
 //one should be at the bottom first?
 app.get('/greeting/:name', (req, res) => {
@@ -18,8 +29,6 @@ app.get('/greeting/:name', (req, res) => {
     console.log(param + " it's so great to see you!")
 
 })
-
-
 
 
 
