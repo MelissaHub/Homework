@@ -7,6 +7,13 @@ const tipPercentage = 0
 
 
 
+app.get('/', (req, res) => {
+
+    for (i = 99; i <= 99; i++){
+    console.log( bottle +' Bottles of beer on the wall')
+    }
+   
+})
 
 app.get('/magic/Will%20I%20Be%20A%20Millionaire', (req, res) => {
     console.log('Will I be a Millionaire?')
@@ -15,7 +22,6 @@ app.get('/magic/Will%20I%20Be%20A%20Millionaire', (req, res) => {
     res.send(item)
    
 })
-
 
 app.get('/tip', (req, res) => {
     res.send(total)
